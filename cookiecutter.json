@@ -1,0 +1,5 @@
+{
+    "trigger_name": "template_trigger",
+    "action": "Add",
+    "undo_action": "Remove"
+}

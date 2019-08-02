@@ -1,0 +1,50 @@
+#******************************************************************************
+#*                           Trigger Datafile Template
+#* ----------------------------------------------------------------------------
+#* ABOUT THIS TEMPLATE - Please read
+#*
+#* - Any comments with "#*" in front of them (like this entire comment box) are
+#*   for template clarifications only and should be removed from the final
+#*   product.
+#*
+#* - Anything enclosed in <> must be replaced by the appropriate text for your
+#*   application
+#*
+#* Support:
+#*    pyats-support@cisco.com
+#*
+#* Description:
+#*   This template file describes how to write a trigger datafile.
+#*
+#* Read More:
+#*   For the complete and up-to-date user guide on triggers, visit:
+#*   http://wwwin-pyats.cisco.com/cisco-shared/genie/latest/userguide/harness/developer/triggers.html
+#*
+#*******************************************************************************
+
+
+#* Trigger Datafile schema
+#* -----------------------
+#*
+#* Production schema with commentary from the devs
+
+extends: # Use this field to extend an existing yaml Trigger file,
+         # allowing you to create an inheritance hierarchy.
+         # Supports full path/names or names of file in the the same dir.
+         # ``Genie`` provides a master set of triggers for you to extend
+         # from as a start. It is found at:
+         # <$virtual_env>/lib/python3.4/site-packages/genie/infra/triggers.yaml
+
+{{ cookiecutter.trigger_name }}: # Trigger name goes here
+
+    source: # This section is used to let
+            # Genie know where the trigger class
+            # is located.
+
+        class: # Location of the class that contains the trigger.
+               # (Example: sdk.triggers.shutnoshut.shutnoshut.TriggerShutNoShutOspf)
+
+    devices: # Devices lists to execute the verification.
+             # Can either be an alias or device hostname
+             # as defined in the pyats testbed file.
+             # If there is no device, the verification will not execute.
